@@ -1,0 +1,278 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css2?family=Amatic+SC&family=Righteous&display=swap);
+
+
+body{
+  margin:0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #bdcebe;
+  height: 60px;
+  margin-bottom: 10px;
+  border-radius: 0px;
+}
+
+.navig a{
+  background-color: #8ca3a3;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-family: 'Lato', serif;
+}
+
+.navig a:hover {
+  background-color: CadetBlue;
+  color: black;
+}
+
+header {
+    display: flex;
+    position: relative;
+    height: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+  
+header img{
+    height: 500px;
+    width: 100%;
+}
+
+#overlay {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    height: 500px;
+    width: 100%;
+}
+    
+#overlay h1 {
+    top: 320px;
+    text-align: center;
+    position: relative;
+    color: white;
+    font-size: 3.7em;
+    font-family: 'Amatic SC', cursive;
+    text-transform: uppercase;
+}
+
+.userpic{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    width: 100px;
+    height: 100px;
+    background-image: url('images/standard_user.png');
+    background-size: cover;
+    margin: 0 auto;
+    margin-top: -40px;
+    right: 30px;
+    left: 30px;
+}
+
+.userpic h1{
+    font-size: 14px;
+    font-family: 'Lato', arial;
+    margin: 100px auto 10px;
+    width: 100px;
+    text-align: center;
+}
+
+#feed{
+    background-color: rgba(0,0,0,0);
+    display: flex;
+    height: auto;
+    width: 70%;
+    padding: 0 40px 0 40px;
+    margin: 100px auto auto auto;
+    flex-direction: column;
+    font-family: 'Lato', arial;
+}
+
+.post_grid{
+    margin-top: 20px;
+}
+
+.post_grid p{
+    text-align: justify;
+    font-family: 'Lato', arial;
+}
+
+.post_grid img{
+    width: 100%;
+    margin-top: 20px;
+}
+
+#piedi{
+    display: flex;
+    background-color: rgba(12, 99, 127, 0.9);
+    position: relative;
+    justify-content: center;
+    z-index:99;
+    align-items: center;
+    font-family: 'Lato', arial;
+    margin-top:60px;
+}
+  
+.foot{
+    text-align: center;
+    color:#ffffff;
+}
+
+
+/*INTEGRAZIONE API*/
+
+form{
+    width: 66%;
+    margin: 40px auto 10px auto;
+    text-align: center;
+    font-family: 'Lato', arial;
+  }
+  
+  
+#global-view{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0px;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+}
+  
+#global-view .container{
+    margin: 10px;
+    padding: 10px;
+    max-width: 230px;
+    max-height: 230px;
+    display:flex;
+    flex-direction: column;
+    cursor: pointer;
+    background-color: white;
+}
+  
+.container img{
+    max-height: 100%;
+    max-width: 100%;
+}
+  
+.hidden{
+    display:none;
+}
+  
+.modale{
+    display: flex; /*flex deve esserlo solo il DIV non anche l'immagine al suo interno*/
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    width:100%;
+    position: fixed; /*posiziono la modale al centro, qualsiasi immagine prendo*/
+    left: 0;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+}
+  
+.modale img{
+    height: 50%;
+}
+  
+.no-scroll{
+    overflow: hidden;
+}  
+
+
+
+/*OAUTH 2.0*/
+
+#city-api, #kat-api, #bali-api,
+#berli-api, #chic-api{
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  margin-top: 10px;
+}
+
+#city-api .album, #kat-api .album,
+#bali-api .album, #berli-api .album,
+#chic-api .album{
+  margin: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  max-width: 150px;
+  display:flex;
+  flex-direction: column;
+  height: auto;
+}
+
+#city-api img, #kat-api img{
+  max-width: 100%;
+}
+
+#cityb, #katb,  #balib,
+#berlib,  #chicb{
+  display: flex;
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+#but1, #but2, #but3, #but4, #but5{
+  background-color: mediumturquoise;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-family: 'Lato', serif;
+}
+
+#but1:hover, #but2:hover, #but3:hover,
+#but4:hover, #but5:hover {
+  background-color: #85dfdd;
+  color: black;
+}
+
+  
+/*LIKES*/
+
+.post_grid .like{
+    margin: 5px 0 20px 0;
+    padding-right: 20px;
+    display: flex;
+    cursor: pointer;
+    border-radius: 4px;
+    height: 23px;
+    width: 20px;
+    background: url("images/cuore_1.png") no-repeat;
+    background-size: 17px;
+    background-color: #f4e1d2;
+    background-position: 12%;
+}
+  
+.like span, .liked span{
+    padding-top: 3px;
+    padding-left: 27px;
+    display: inline-block;
+    font-size: 14px;
+}
+  
+.post_grid .liked{
+    margin: 5px 0 20px 0;
+    padding-right: 20px;
+    display: flex;
+    cursor: pointer;
+    border-radius: 4px;
+    height: 23px;
+    width: 20px;
+    background: url("images/cuore_2.png") no-repeat;
+    background-size: 17px;
+    background-color: #f4e1d2;
+    background-position: 12%; 
+}
+
